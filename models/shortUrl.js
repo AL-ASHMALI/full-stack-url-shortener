@@ -1,8 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose') 
 const shortId = require('shortid') // library that creates a unique short identifier   
 
 
-const shortUrlSchema = new mongoose.Schema({
+const shortUrlSchema = new mongoose.Schema({ // creating the schema/rules for the database collection
   full:{
     type: String, 
     required: true 
@@ -10,7 +10,7 @@ const shortUrlSchema = new mongoose.Schema({
   short:{
     type: String,
     required: true,
-    default: shortId.generate
+    default: shortId.generate // generates a unique short identifier 
   },
   clicks: {
     type: Number, 
