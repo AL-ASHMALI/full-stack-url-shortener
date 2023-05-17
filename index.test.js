@@ -3,7 +3,8 @@ const puppeteer = require('puppeteer');
 test('should input a long URL and return a short URL', async() => {
   const browser = await puppeteer.launch({
     headless: false, 
-    slowMode: 1000
+    slowMo: 100, 
+    devtools: true
 
   }); // launch the browser 
   const page = await browser.newPage(); // create a new page
